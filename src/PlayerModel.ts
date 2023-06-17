@@ -1,5 +1,5 @@
 export interface PlayerModel {
     id: string;
-    playerName: string;
+    name: string;
     onList: boolean;
 }

@@ -13,7 +13,7 @@ export const HomePage = () => {
         e.preventDefault();
 
         if (playerName) {
-            setplayerPowerRankings([...playerPowerRankings, {id: uuidv4(), playerName, onList: true }])
+            setplayerPowerRankings([...playerPowerRankings, {id: uuidv4(), name: playerName, onList: true }])
             setplayerName("")
         }
 
@@ -29,7 +29,7 @@ export const HomePage = () => {
         <div>
             <h2>NBA Power Rankings</h2>
             <InputPlayerField playerName={playerName} setplayerName={setplayerName} handleAddPlayer={handleAddPlayer} />
-            <PlayerList />
+            {playerPowerRankings && <PlayerList players={playerPowerRankings} />}
         </div>
     )
 }
