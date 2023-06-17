@@ -1,5 +1,5 @@
 import '../styles/style.css';
-import React from 'react' 
+import React, {useRef} from 'react' 
 
 interface InputPlayerFieldProps {
     playerName: string;
@@ -8,10 +8,15 @@ interface InputPlayerFieldProps {
   }
 
 export const InputPlayerField: React.FC<InputPlayerFieldProps> = ({playerName, setplayerName, handleAddPlayer}) => {
+    const playerInputRef = useRef<HTMLInputElement>(null)
 
     return (
-        <form className="player_input" onSubmit={handleAddPlayer}> 
+        <form className="player_input" onSubmit={(e) => {
+            handleAddPlayer(e)
+            playerInputRef.current?.blur()
+        }}> 
             <input 
+                ref={playerInputRef}
                 type="input" 
                 value={playerName} 
                 onChange={(e)=>setplayerName(e.target.value)} 
