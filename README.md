@@ -1,10 +1,14 @@
 # NBA Power Rankings
 
 This is my first React Typescript project where I will be learning typescript and building an application where users can make their own nba player power rankings
+User can add any player they like, adjust where they are in their own rankings, and be able to view the player's statistics as well by clicking their names
+All statistics will be fetched from https://app.balldontlie.io/#introduction
 
 ## Installation
 
 1. Clone the repository or download the source code files.
+2. To run file, will need to run `npm script` 
+3. To run the json server, will need to run `npx json-server --watch data/db.json --port 8000`
 
 # Getting Started with Create React App
 
