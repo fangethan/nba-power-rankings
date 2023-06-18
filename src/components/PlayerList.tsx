@@ -1,6 +1,5 @@
 import React from 'react'
 import { PlayerModel } from '../PlayerModel'
-import {Link} from "react-router-dom"
 import { SinglePlayer } from './SinglePlayer'
 
 interface PlayerListProps {
