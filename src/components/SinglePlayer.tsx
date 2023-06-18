@@ -9,8 +9,10 @@ interface SinglePlayerProps {
 export const SinglePlayer: React.FC<SinglePlayerProps> = ({name, id}) => {
     return (
         <div className="single_player">
-            <h2>{name}</h2>
-            <h2>{id}</h2>
+            <Link to={`/player/${id}`}>
+                <h2>{name}</h2>
+                <p>New York Knicks</p>
+            </Link>
         </div>
     )
 }
