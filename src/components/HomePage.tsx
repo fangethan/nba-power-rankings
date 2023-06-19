@@ -13,7 +13,6 @@ export const HomePage = () => {
         e.preventDefault();
 
         if (playerName){
-            console.log("in here")
             fetch(`https://www.balldontlie.io/api/v1/players?search=${playerName}`).then(async (res) => {
                 const data = await res.json();
                 if (data.data[0] === undefined) {
@@ -53,12 +52,8 @@ export const HomePage = () => {
           console.log(err);
           return undefined;
         }
-      };
+    };
 
-    useEffect(() => {
-        console.log(playerPowerRankings);
-        console.log(playerName)
-    }, [playerPowerRankings, playerName]);
 
     return (
         <div>
