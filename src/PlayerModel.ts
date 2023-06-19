@@ -20,4 +20,5 @@ export interface PlayerStats {
     freeThrowsPercentage: number;
     turnovers: number;
     minutes: number;
+    games_played: number;
 }

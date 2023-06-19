@@ -12,8 +12,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({players}) => {
             {players.map((player) => (
                 <div className="player-preview" key={player.id} >
                     <SinglePlayer 
-                        name={player.name}
-                        id={player.id}
+                        player={player}
                         />
                 </div>
             ))}

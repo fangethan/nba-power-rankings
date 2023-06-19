@@ -1,25 +1,29 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import {AiFillDelete} from "react-icons/ai"
+import { PlayerModel } from '../PlayerModel'
 
 interface SinglePlayerProps {
-    name: string;
-    id: string;
+    player: PlayerModel
 }
 
-export const SinglePlayer: React.FC<SinglePlayerProps> = ({name, id}) => {
+export const SinglePlayer: React.FC<SinglePlayerProps> = ({player}) => {
     
     const handleDeletePlayer = (id: string) => {
-        console.log(id)
+        fetch("http://localhost:3000/players/" + id, {
+            method: "DELETE",
+        }).then(() => {
+            console.log("Player " + id + " deleted")
+        })
     }
 
     return (
         <div className="single_player">
-            <Link to={`/player/${id}`}>
-                <h2>{name}</h2>
-                <p>New York Knicks</p>
+            <Link to={`/player/${player.id}`}>
+                <h2>{player.name}</h2>
+                <p>{player.team_name}</p>
             </Link>
-            <span className="icon" onClick={() => handleDeletePlayer(id)}>
+            <span className="icon" onClick={() => handleDeletePlayer(player.id)}>
                 <AiFillDelete/>
             </span>
         </div>
