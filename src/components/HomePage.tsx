@@ -30,6 +30,7 @@ export const HomePage = () => {
                             team_name: data.data[0].team.full_name,
                             position: data.data[0].position,
                             height: data.data[0].height_feet + "'" + data.data[0].height_inches,
+                            weight: data.data[0].weight_pounds + "lbs",
                             stats: await getPlayerStats(data.data[0].id),
                             onList: true, 
                         }])
