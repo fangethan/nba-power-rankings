@@ -1,6 +1,6 @@
 import React, { useState } from 'react' 
 import { PlayerModel } from '../PlayerModel'
-import { SinglePlayer } from './SinglePlayer'
+import { SinglePlayer } from './PlayerDetails'
 import {Link} from "react-router-dom"
 import {AiFillDelete} from "react-icons/ai"
 
