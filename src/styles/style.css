@@ -44,19 +44,20 @@
   box-shadow: 0 0 5px black;
 }
 
-.single_player {
-  display: flex;
-  width: 29.5%;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 15px;
-  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
-  transition: 0.2s;
+.player-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.player-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
 
-.single_player--text {
-  flex: 1;
-  padding: 5px;
-  border: none;
-  font-size: 20px;
+.player-preview h2,p {
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+
+.player-preview a {
+  text-decoration: none;
 }

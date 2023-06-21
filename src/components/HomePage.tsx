@@ -33,6 +33,7 @@ export const HomePage = () => {
                             stats: await getPlayerStats(data.data[0].id),
                             onList: true, 
                         }])
+                    console.log(playerPowerRankings)
                     setplayerName("")
                 }
                 }).catch((err) => {
@@ -44,7 +45,7 @@ export const HomePage = () => {
     const getPlayerStats = async (id: number): Promise<PlayerStats | undefined> => {
         try {
           const response = await fetch(
-            `https://www.balldontlie.io/api/v1/season_averages?season=2006&player_ids[]=${id}`
+            `https://www.balldontlie.io/api/v1/season_averages?season=2022&player_ids[]=${id}`
           );
           const playerData = await response.json();
           return playerData.data[0];

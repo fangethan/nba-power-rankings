@@ -10,15 +10,15 @@ export interface PlayerModel {
 }
 
 export interface PlayerStats {
-    points: number;
-    rebounds: number;
-    assists: number;
-    steals: number;
-    blocks: number;
-    fgPercentage: number;
-    threePointPercentage: number;
-    freeThrowsPercentage: number;
-    turnovers: number;
-    minutes: number;
+    pts: number;
+    reb: number;
+    ast: number;
+    stl: number;
+    blk: number;
+    fg_pct: number;
+    fg3_pct: number;
+    ft_pct: number;
+    turnover: number;
+    min: string;
     games_played: number;
 }
