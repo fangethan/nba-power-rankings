@@ -8,7 +8,10 @@ All statistics will be fetched from https://app.balldontlie.io/#introduction
 
 1. Clone the repository or download the source code files.
 2. To run file, will need to run `npm script` 
-3. To run the json server, will need to run `npx json-server --watch data/db.json --port 8000`
+3. Install the following npm packages:
+   1. `npm i react-draggable`
+   2. `npm install react-icons`
+4. To run the json server, will need to run `npx json-server --watch data/db.json --port 8000`
 
 # Getting Started with Create React App
 

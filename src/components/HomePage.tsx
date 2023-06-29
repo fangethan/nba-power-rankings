@@ -55,7 +55,6 @@ export const HomePage = () => {
         }
     };
 
-
     return (
         <div>
             <h2>NBA Power Rankings</h2>
