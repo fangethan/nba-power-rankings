@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import {InputPlayerField} from './InputPlayerField'
 import {PlayerList} from './PlayerList'
 import { PlayerModel, PlayerStats } from '../PlayerModel'
-const { v4: uuidv4 } = require('uuid');
+import nbaLogo from "../images/nba_logo.png"
 
+const { v4: uuidv4 } = require('uuid');
 
 export const HomePage = () => {
     const [playerName, setplayerName] = useState("")
@@ -57,7 +58,13 @@ export const HomePage = () => {
 
     return (
         <div>
-            <h2>NBA Power Rankings</h2>
+            <div className='title'>
+                <span className='logo_container'>
+                    <img className='logo_image' src={nbaLogo} alt="Nbalogo"  />
+                </span>
+                <h2>NBA Power Rankings</h2>
+            </div>
+            <br />
             <InputPlayerField playerName={playerName} setplayerName={setplayerName} handleAddPlayer={handleAddPlayer} />
             {playerPowerRankings && <PlayerList players={playerPowerRankings} />}
         </div>
