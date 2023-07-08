@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react' 
+import React, { useState } from 'react' 
 import {InputPlayerField} from './InputPlayerField'
 import {PlayerList} from './PlayerList'
 import { PlayerModel, PlayerStats } from '../PlayerModel'
@@ -22,7 +22,6 @@ export const HomePage = () => {
                     alert("Please specify the name more!");
                 } else {          
                     const playerFullName = data.data[0].first_name + " " + data.data[0].last_name
-                    
                     const isDuplicate = playerPowerRankings.some((player: PlayerModel) => {
                         return player.name === playerFullName;
                     });
