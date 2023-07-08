@@ -111,10 +111,13 @@
 .delete_icon {
   background-color: #ff0000;
   color: white;
+  height: 25px;
   padding: 4px 8px;
   border-radius: 4px;
+  float: right;
+  visibility: hidden;
 } 
 
-/* .player-preview:hover .delete_icon {
+.player-preview:hover .delete_icon {
   visibility: visible;
-} */
+}

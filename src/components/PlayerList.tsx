@@ -21,13 +21,13 @@ export const PlayerList: React.FC<PlayerListProps> = ({players}) => {
         setselectedPlayer(player)
     }
 
-    // const handleDeletePlayer = (id: string) => {
-    //     fetch("http://localhost:3000/players/" + id, {
-    //         method: "DELETE",
-    //     }).then(() => {
-    //         console.log("Player " + id + " deleted")
-    //     })
-    // }
+    const handleDeletePlayer = (id: string) => {
+        fetch("http://localhost:3000/players/" + id, {
+            method: "DELETE",
+        }).then(() => {
+            console.log("Player " + id + " deleted")
+        })
+    }
 
     const handleOnDragEnd = (result: any) => {
         if (!result.destination) return;
@@ -58,9 +58,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({players}) => {
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
                               >
-                                {/* <span className="delete_icon">
-                                  <AiFillDelete />
-                                </span> */}
+                                <AiFillDelete className='delete_icon' onClick={() => handleDeletePlayer(player.id)} />
                                 <img className='team_logo' src={hawksLogo} alt="team_logo" />
                                 <Link to={`/player/${player.id}`} onClick={() => handlePlayerClick(player)}>
                                   <h2>{player.name}</h2>
