@@ -20,22 +20,30 @@ export const HomePage = () => {
                     alert("This player is either injured or hasn't played yet!");
                 } else if (data.data.length > 1) {
                     alert("Please specify the name more!");
-                } else {                   
+                } else {          
                     const playerFullName = data.data[0].first_name + " " + data.data[0].last_name
-                    setplayerName(playerFullName)
-                    setplayerPowerRankings([...playerPowerRankings, 
-                        {
-                            id: uuidv4(), 
-                            name: playerFullName, 
-                            team_name: data.data[0].team.full_name,
-                            position: data.data[0].position,
-                            height: data.data[0].height_feet + "'" + data.data[0].height_inches,
-                            weight: data.data[0].weight_pounds + "lbs",
-                            stats: await getPlayerStats(data.data[0].id),
-                            onList: true, 
-                        }])
-                    console.log(playerPowerRankings)
-                    setplayerName("")
+                    
+                    const isDuplicate = playerPowerRankings.some((player: PlayerModel) => {
+                        return player.name === playerFullName;
+                    });
+                    
+                    if (isDuplicate) {
+                        alert(`${playerFullName} is already in the power rankings`);
+                    } else {
+                        setplayerName(playerFullName)
+                        setplayerPowerRankings([...playerPowerRankings, 
+                            {
+                                id: uuidv4(), 
+                                name: playerFullName, 
+                                team_name: data.data[0].team.full_name,
+                                position: data.data[0].position,
+                                height: data.data[0].height_feet + "'" + data.data[0].height_inches,
+                                weight: data.data[0].weight_pounds + "lbs",
+                                stats: await getPlayerStats(data.data[0].id),
+                                onList: true, 
+                            }])
+                        setplayerName("")
+                    }
                 }
                 }).catch((err) => {
                     console.log(err);
