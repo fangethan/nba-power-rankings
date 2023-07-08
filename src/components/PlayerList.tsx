@@ -4,6 +4,8 @@ import { SinglePlayer } from './PlayerDetails'
 import {Link} from "react-router-dom"
 import {AiFillDelete} from "react-icons/ai"
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import hawksLogo from "../images/atl_hawks_logo.png"
+
 
 interface PlayerListProps {
     players: PlayerModel[]
@@ -19,13 +21,13 @@ export const PlayerList: React.FC<PlayerListProps> = ({players}) => {
         setselectedPlayer(player)
     }
 
-    const handleDeletePlayer = (id: string) => {
-        fetch("http://localhost:3000/players/" + id, {
-            method: "DELETE",
-        }).then(() => {
-            console.log("Player " + id + " deleted")
-        })
-    }
+    // const handleDeletePlayer = (id: string) => {
+    //     fetch("http://localhost:3000/players/" + id, {
+    //         method: "DELETE",
+    //     }).then(() => {
+    //         console.log("Player " + id + " deleted")
+    //     })
+    // }
 
     const handleOnDragEnd = (result: any) => {
         if (!result.destination) return;
@@ -56,13 +58,14 @@ export const PlayerList: React.FC<PlayerListProps> = ({players}) => {
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
                               >
+                                {/* <span className="delete_icon">
+                                  <AiFillDelete />
+                                </span> */}
+                                <img className='team_logo' src={hawksLogo} alt="team_logo" />
                                 <Link to={`/player/${player.id}`} onClick={() => handlePlayerClick(player)}>
                                   <h2>{player.name}</h2>
                                   <p>{player.team_name}</p>
                                 </Link>
-                                <span className="icon" onClick={() => handleDeletePlayer(player.id)}>
-                                  <AiFillDelete />
-                                </span>
                               </div>
                             )}
                           </Draggable>

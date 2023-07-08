@@ -77,20 +77,44 @@
   box-shadow: 0 0 5px black;
 }
 
+.player_list {
+  display: flex;
+  justify-content: center;
+}
+
 .player-preview {
   padding: 10px 16px;
   margin: 20px 0;
+  width: 500px;
   border-bottom: 1px solid #fafafa;
-}
-.player-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
 }
 
 .player-preview h2,p {
   color: #f1356d;
   margin-bottom: 8px;
+  margin-right: 50px;
+  text-align: center;
 }
 
 .player-preview a {
   text-decoration: none;
 }
+
+.team_logo {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+.delete_icon {
+  background-color: #ff0000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+} 
+
+/* .player-preview:hover .delete_icon {
+  visibility: visible;
+} */
