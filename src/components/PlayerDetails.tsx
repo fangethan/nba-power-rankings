@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from "react-router-dom"
 import {AiFillDelete} from "react-icons/ai"
 import { PlayerModel } from '../PlayerModel'
 
@@ -51,7 +50,7 @@ export const SinglePlayer: React.FC<SinglePlayerProps> = ({player}) => {
                     <td> {player.stats && player.stats.turnover} </td>
                 </tr>
             </table>
-            <span className="icon" onClick={() => handleDeletePlayer(player.id)}>
+            <span className="delete_icon" onClick={() => handleDeletePlayer(player.id)}>
                 <AiFillDelete/>
             </span>
         </div>

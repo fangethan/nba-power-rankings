@@ -4,8 +4,39 @@ import { SinglePlayer } from './PlayerDetails'
 import {Link} from "react-router-dom"
 import {AiFillDelete} from "react-icons/ai"
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import hawksLogo from "../images/atl_hawks_logo.png"
 
+const teamLogos = [
+    require("../images/team_logos/atl_hawks_logo.png"),
+    require("../images/team_logos/boston_logo.png"),
+    require("../images/team_logos/brooklyn_logo.png"),
+    require("../images/team_logos/charlotte_logo.png"),
+    require("../images/team_logos/chicago_logo.png"),
+    require("../images/team_logos/cavs_logo.png"),
+    require("../images/team_logos/dallas_logo.png"),
+    require("../images/team_logos/denver_logo.png"),
+    require("../images/team_logos/detroit_logo.png"),
+    require("../images/team_logos/warriors_logo.png"),
+    require("../images/team_logos/rockets_logo.png"),
+    require("../images/team_logos/pacers_logo.png"),
+    require("../images/team_logos/clippers_logo.png"),
+    require("../images/team_logos/lakers_logo.png"),
+    require("../images/team_logos/memphis_logo.png"),
+    require("../images/team_logos/miami_logo.png"),
+    require("../images/team_logos/bucks_logo.png"),
+    require("../images/team_logos/timberwolves_logo.png"),
+    require("../images/team_logos/pelicans_logo.png"),
+    require("../images/team_logos/knicks_logo.png"),
+    require("../images/team_logos/okc_logo.png"),
+    require("../images/team_logos/magic_logo.png"),
+    require("../images/team_logos/76ers_logo.png"),
+    require("../images/team_logos/suns_logo.png"),
+    require("../images/team_logos/blazers_logo.png"),
+    require("../images/team_logos/kings_logo.png"),
+    require("../images/team_logos/spurs_logo.png"),
+    require("../images/team_logos/raptors_logo.png"),
+    require("../images/team_logos/jazz_logo.png"),
+    require("../images/team_logos/wizards_logo.png"),
+];
 
 interface PlayerListProps {
     players: PlayerModel[]
@@ -59,7 +90,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({players}) => {
                                 {...provided.dragHandleProps}
                               >
                                 <AiFillDelete className='delete_icon' onClick={() => handleDeletePlayer(player.id)} />
-                                <img className='team_logo' src={hawksLogo} alt="team_logo" />
+                                <img className='team_logo' src={teamLogos[29]} alt="team_logo" />
                                 <Link to={`/player/${player.id}`} onClick={() => handlePlayerClick(player)}>
                                   <h2>{player.name}</h2>
                                   <p>{player.team_name}</p>
