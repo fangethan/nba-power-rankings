@@ -24,10 +24,10 @@
 }
 
 .player_input {
-    display: flex;
-    width: 50%;
-    position: relative;
-    align-items: center;
+  display: flex;
+  width: 50%;
+  position: relative;
+  align-items: center;
 }
 
 @media screen and (max-width: 720px) {
@@ -87,11 +87,11 @@
   margin: 20px 0;
   width: 500px;
   border-bottom: 1px solid #fafafa;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.player-preview h2,p {
+.player-preview h2,
+p {
   color: #f1356d;
   margin-bottom: 8px;
   margin-right: 50px;
@@ -116,7 +116,7 @@
   border-radius: 4px;
   float: right;
   visibility: hidden;
-} 
+}
 
 .player-preview:hover .delete_icon {
   visibility: visible;

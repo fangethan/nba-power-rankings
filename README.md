@@ -7,7 +7,7 @@ All statistics will be fetched from https://app.balldontlie.io/#introduction
 ## Installation
 
 1. Clone the repository or download the source code files.
-2. To run file, will need to run `npm script` 
+2. To run file, will need to run `npm script`
 3. Install the following npm packages:
    1. `npm i react-draggable`
    2. `npm install react-icons`
