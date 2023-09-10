@@ -49,7 +49,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({ players }) => {
   }, [players]);
 
   return (
-    <div className="player_list">
+    <div className="player-list">
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="players-1">
           {(provided) => (
@@ -68,11 +68,11 @@ export const PlayerList: React.FC<PlayerListProps> = ({ players }) => {
                       {...provided.dragHandleProps}
                     >
                       <AiFillDelete
-                        className="delete_icon"
+                        className="delete-icon"
                         onClick={() => handleDeletePlayer(player.id)}
                       />
                       <img
-                        className="team_logo"
+                        className="team-logo"
                         src={
                           teamLogos[
                             player.team_name
@@ -80,7 +80,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({ players }) => {
                               .replace(/\s/g, "") as keyof typeof teamLogos
                           ]
                         }
-                        alt="team_logo"
+                        alt="team-logo"
                       />
                       <Link
                         to={`/player/${player.id}`}

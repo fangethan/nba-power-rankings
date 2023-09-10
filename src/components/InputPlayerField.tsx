@@ -15,9 +15,9 @@ export const InputPlayerField: React.FC<InputPlayerFieldProps> = ({
   const playerInputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="player_input_container">
+    <div className="player-input-container">
       <form
-        className="player_input"
+        className="player-input"
         onSubmit={(e) => {
           handleAddPlayer(e);
           playerInputRef.current?.blur();
@@ -29,9 +29,9 @@ export const InputPlayerField: React.FC<InputPlayerFieldProps> = ({
           value={playerName}
           onChange={(e) => setplayerName(e.target.value)}
           placeholder="Enter a player's name"
-          className="player_input_box"
+          className="player-input-box"
         />
-        <button className="player_input_submit" type="submit">
+        <button className="player-input-submit" type="submit">
           Go
         </button>
       </form>

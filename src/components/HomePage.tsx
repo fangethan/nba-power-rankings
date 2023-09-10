@@ -78,8 +78,8 @@ export const HomePage = () => {
   return (
     <div>
       <div className="title">
-        <span className="logo_container">
-          <img className="logo_image" src={nbaLogo} alt="Nbalogo" />
+        <span className="logo-container">
+          <img className="logo-image" src={nbaLogo} alt="Nbalogo" />
         </span>
         <h2>NBA Power Rankings</h2>
       </div>

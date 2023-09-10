@@ -22,8 +22,8 @@ export const SinglePlayer: React.FC<SinglePlayerProps> = ({
   };
 
   return (
-    <div className="single_player_container">
-      <div className="inner_single_player_container">
+    <div className="single-player-container">
+      <div className="inner-single-player-container">
         <h2>{player.name}</h2>
         <p>
           {player.team_name}, {player.position}{" "}
@@ -31,7 +31,7 @@ export const SinglePlayer: React.FC<SinglePlayerProps> = ({
         <p>
           HT/WT: {player.height}, {player.weight}{" "}
         </p>
-        <table className="individual_table">
+        <table className="individual-table">
           <tr>
             <th>GP</th>
             <th>MIN</th>

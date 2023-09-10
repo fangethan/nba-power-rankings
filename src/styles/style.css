@@ -7,23 +7,23 @@
   display: flex;
 }
 
-.logo_container {
+.logo-container {
   padding: 10px;
 }
 
-.logo_image {
+.logo-image {
   height: 70px;
   background-color: white;
   padding: 3px;
   border-radius: 10px;
 }
 
-.player_input_container {
+.player-input-container {
   justify-content: center;
   display: flex;
 }
 
-.player_input {
+.player-input {
   display: flex;
   width: 50%;
   position: relative;
@@ -31,7 +31,7 @@
 }
 
 @media screen and (max-width: 720px) {
-  .player_input {
+  .player-input {
     display: flex;
     width: 75%;
     position: relative;
@@ -39,7 +39,7 @@
   }
 }
 
-.player_input_box {
+.player-input-box {
   width: 100%;
   border-radius: 30px;
   padding: 20px 30px;
@@ -49,12 +49,12 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.player_input_box:focus {
+.player-input-box:focus {
   box-shadow: 0 0 10px 100vw rgba(0, 0, 0, 0.5);
   outline: none;
 }
 
-.player_input_submit {
+.player-input-submit {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -68,16 +68,16 @@
   transition: 0.2s all;
 }
 
-.player_input_submit:hover {
+.player-input-submit:hover {
   background-color: #388ae2;
 }
 
-.player_input_submit:active {
+.player-input-submit:active {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
 }
 
-.player_list {
+.player-list {
   display: flex;
   justify-content: center;
 }
@@ -102,13 +102,13 @@ p {
   text-decoration: none;
 }
 
-.team_logo {
+.team-logo {
   float: left;
   width: 80px;
   height: 80px;
 }
 
-.delete_icon {
+.delete-icon {
   background-color: #ff0000;
   color: white;
   height: 25px;
@@ -118,11 +118,11 @@ p {
   visibility: hidden;
 }
 
-.player-preview:hover .delete_icon {
+.player-preview:hover .delete-icon {
   visibility: visible;
 }
 
-.single_player_container {
+.single-player-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +135,7 @@ p {
   align-items: center;
 }
 
-.inner_single_player_container {
+.inner-single-player-container {
   position: relative;
   padding: 10%;
   width: 100%;
@@ -143,13 +143,13 @@ p {
   background-color: white;
 }
 
-.inner_single_player_container .close-popup-btn {
+.inner-single-player-container .close-popup-btn {
   position: absolute;
   top: 16px;
   right: 16px;
 }
 
-.individual_player,
+.individual-table,
 th,
 td {
   border: 1px solid #ff0000;
