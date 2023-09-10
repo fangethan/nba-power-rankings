@@ -22,6 +22,10 @@ export const PlayerList: React.FC<PlayerListProps> = ({ players }) => {
     setselectedPlayer(player);
   };
 
+  const closePopUp = () => {
+    setisPopUpOpen(false);
+  };
+
   const handleDeletePlayer = (id: string) => {
     fetch("http://localhost:3000/players/" + id, {
       method: "DELETE",
@@ -95,7 +99,11 @@ export const PlayerList: React.FC<PlayerListProps> = ({ players }) => {
         </Droppable>
       </DragDropContext>
       {isPopUpOpen && selectedPlayer && (
-        <SinglePlayer player={selectedPlayer} isPopUpOpen={isPopUpOpen} />
+        <SinglePlayer
+          player={selectedPlayer}
+          isPopUpOpen={isPopUpOpen}
+          onClosePopUp={closePopUp}
+        />
       )}
     </div>
   );
