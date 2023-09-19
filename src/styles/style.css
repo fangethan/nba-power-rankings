@@ -137,10 +137,19 @@ p {
 
 .inner-single-player-container {
   position: relative;
-  padding: 10%;
+  padding: 5%;
   width: 100%;
-  max-width: 300px;
   background-color: white;
+
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  max-width: fit-content;
+}
+
+.inner-single-player-container * {
+  margin: 0;
+  padding: 10px;
 }
 
 .inner-single-player-container .close-popup-btn {
