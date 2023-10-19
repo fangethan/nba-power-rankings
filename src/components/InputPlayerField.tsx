@@ -1,11 +1,11 @@
 import "../styles/style.css";
 import React, { useRef } from "react";
 
-interface InputPlayerFieldProps {
+type InputPlayerFieldProps = {
   playerName: string;
   setplayerName: React.Dispatch<React.SetStateAction<string>>;
   handleAddPlayer: (e: React.FormEvent) => void;
-}
+};
 
 export const InputPlayerField: React.FC<InputPlayerFieldProps> = ({
   playerName,

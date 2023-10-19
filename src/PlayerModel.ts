@@ -1,4 +1,4 @@
-export interface PlayerModel {
+export type PlayerModel = {
   id: string;
   name: string;
   team_name: string;
@@ -7,9 +7,9 @@ export interface PlayerModel {
   weight: string;
   stats: PlayerStats | undefined;
   onList: boolean;
-}
+};
 
-export interface PlayerStats {
+export type PlayerStats = {
   pts: number;
   reb: number;
   ast: number;
@@ -21,4 +21,4 @@ export interface PlayerStats {
   turnover: number;
   min: string;
   games_played: number;
-}
+};

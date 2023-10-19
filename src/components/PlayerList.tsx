@@ -6,9 +6,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { teamLogos } from "./TeamLogos";
 
-interface PlayerListProps {
+type PlayerListProps = {
   players: PlayerModel[];
-}
+};
 
 export const PlayerList: React.FC<PlayerListProps> = ({ players }) => {
   const [isPopUpOpen, setisPopUpOpen] = useState(false);

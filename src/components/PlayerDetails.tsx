@@ -2,11 +2,11 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { PlayerModel } from "../PlayerModel";
 
-interface SinglePlayerProps {
+type SinglePlayerProps = {
   player: PlayerModel;
   isPopUpOpen: boolean;
   onClosePopUp: () => void;
-}
+};
 
 export const SinglePlayer: React.FC<SinglePlayerProps> = ({
   player,
